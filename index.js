@@ -19,7 +19,7 @@ function createMenuItem(name, price, category){
     return {name, price, category}
 }
 
-console.log('task 1b:', createMenuItem('pizza', 5, 'lunch'))
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -30,6 +30,10 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+const Pizza = console.log('task 1b:', createMenuItem('pizza', 5, 'lunch'))
+const Pancakes = console.log('task 1b:', createMenuItem('pancakes', 7, 'Breakfast'))
+const Spaghetti = console.log('task 1b:', createMenuItem('spaghetti', 9, 'dinner'))
+ 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -49,10 +53,16 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(person){
+    if (person === 'teacher' || person === 'student'){
+      return this.price * 0.75;
+    }else if (person === 'public'){
+      return this.price * 0.90;
+    }
+  }
 }
 
-
+console.log('task 2:', burger.discount('public'))
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -72,15 +82,16 @@ Using the reviews array above:
 */
 
 
-
+console.log('task 3:', reviews[5].feedback)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
+reviews.push({name: "Stella", rating: 3, feedback: "it was just okay"})
 
-
+console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
